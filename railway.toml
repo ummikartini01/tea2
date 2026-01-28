@@ -1,0 +1,38 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+healthcheckPath = "/health"
+healthcheckTimeout = 100
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 10
+
+[[services]]
+name = "web"
+
+[services.web]
+source = "."
+healthcheckPath = "/health"
+healthcheckTimeout = 100
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 10
+
+[services.web.variables]
+APP_ENV = "production"
+APP_DEBUG = "false"
+APP_URL = "${RAILWAY_PUBLIC_DOMAIN}"
+LOG_CHANNEL = "stderr"
+
+[[services]]
+name = "worker"
+
+[services.worker]
+source = "."
+command = "php artisan tea:continuous-reminders"
+restartPolicyType = "always"
+restartPolicyMaxRetries = 10
+
+[services.worker.variables]
+APP_ENV = "production"
+APP_DEBUG = "false"
+LOG_CHANNEL = "stderr"

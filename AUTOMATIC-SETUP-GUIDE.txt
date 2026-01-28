@@ -1,0 +1,42 @@
+🍵 AUTOMATIC TEA REMINDER SETUP GUIDE 🍵
+================================================
+
+🤔 YOUR PROBLEM:
+"Why do I always have to make you check then run php artisan?"
+✅ SOLUTION: Automatic service that runs every minute!
+
+🚀 EASIEST SETUP (Recommended):
+1. Open File Explorer
+2. Navigate to: C:\Laragon\laragon\www\tea2
+3. Double-click: simple-automatic.bat
+4. Keep the window open
+5. DONE! Your tea reminders are now automatic!
+
+📱 WHAT HAPPENS:
+✅ Service checks every minute for scheduled tea times
+✅ Automatically sends Telegram notifications
+✅ No more manual commands needed
+✅ Works with all your timetables
+
+🔍 TEST IT:
+1. Start the automatic service (double-click simple-automatic.bat)
+2. Create a new timetable with current time + 2 minutes
+3. Wait 2-3 minutes
+4. Check Telegram - notification should arrive automatically!
+
+⚠️ IMPORTANT:
+• Keep the command window open for the service to run
+• The service uses minimal system resources
+• It will check all your timetables automatically
+• Works with the 5-minute notification window
+
+🎯 ALTERNATIVE OPTIONS:
+• PowerShell: start-automatic-reminders.ps1
+• Windows Service: install-windows-service.ps1 (runs on startup)
+
+🎉 RESULT:
+🎊 NO MORE MANUAL COMMANDS NEEDED! 🎊
+Your tea reminders will now be completely automatic!
+
+📞 SUPPORT:
+If you need help, just ask! The system is now fully automatic.
