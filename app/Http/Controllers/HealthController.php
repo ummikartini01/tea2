@@ -10,14 +10,13 @@ class HealthController extends Controller
     public function index()
     {
         try {
-            // Test database connection
-            DB::connection()->getPdo();
-            
+            // Simple health check without database for now
             return response()->json([
                 'status' => 'healthy',
                 'timestamp' => now()->toISOString(),
                 'app' => 'Tea Reminder App',
-                'version' => '1.0.0'
+                'version' => '1.0.0',
+                'environment' => app()->environment()
             ]);
         } catch (\Exception $e) {
             return response()->json([
